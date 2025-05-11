@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Resource extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'guy',
+        'description',
+        'availability',
+        'event_id',
+    ];
+
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
 }
