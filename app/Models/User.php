@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
+    public function services()
+    {
+        return $this->belongsToMany(Service::class);
+    }
     public function events()
     {
         return $this->belongsToMany(Event::class);
