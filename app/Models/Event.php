@@ -16,4 +16,14 @@ class Event extends Model
     {
         return $this->hasMany(Notification::class);
     }
+
+    public function resources()
+    {
+    return $this->hasMany(Resource::class);
+    }
+
+    public function feedbacks()
+    {
+    return $this->hasMany(Feedback::class);
+    }
 }
