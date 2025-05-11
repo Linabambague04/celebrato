@@ -10,7 +10,7 @@ class Resource extends Model
     use HasFactory;
 
     protected $fillable = [
-        'guy',
+        'type',
         'description',
         'availability',
         'event_id',

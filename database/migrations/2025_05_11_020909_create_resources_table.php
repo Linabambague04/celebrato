@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->string('guy');
+            $table->string('type');
             $table->string('description');
             $table->boolean('availability');
             $table->unsignedBigInteger('event_id');
