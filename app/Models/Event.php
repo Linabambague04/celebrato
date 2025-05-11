@@ -19,11 +19,11 @@ class Event extends Model
 
     public function resources()
     {
-    return $this->hasMany(Resource::class);
+        return $this->hasMany(Resource::class);
     }
 
     public function feedbacks()
     {
-    return $this->hasMany(Feedback::class);
+        return $this->hasMany(Feedback::class);
     }
 }
