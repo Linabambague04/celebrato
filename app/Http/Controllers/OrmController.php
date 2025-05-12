@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OmrController extends Controller
+class OrmController extends Controller
 {
     //
 }
