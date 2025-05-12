@@ -16,4 +16,8 @@ class User extends Model
     {
         return $this->belongsToMany(Event::class);
     }
+    public function feedbacks()
+    {
+        return $this->hasMany(Feedback::class);
+    }
 }
