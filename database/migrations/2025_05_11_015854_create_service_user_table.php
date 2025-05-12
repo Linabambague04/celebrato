@@ -20,7 +20,6 @@ return new class extends Migration
                 ->on('services') 
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->timestamps();
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
