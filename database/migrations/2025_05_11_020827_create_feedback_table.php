@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('comment');
             $table->integer('qualification');
+            
             $table->unsignedBigInteger('event_id');
             $table->unsignedBigInteger('user_id');
 

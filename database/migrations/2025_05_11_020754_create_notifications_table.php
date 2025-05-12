@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('message');
             $table->dateTime('date');
+            
             $table->unsignedBigInteger('event_id');
             $table->foreign('event_id')
                 ->references('id')
