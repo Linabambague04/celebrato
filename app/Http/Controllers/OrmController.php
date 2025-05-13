@@ -14,9 +14,32 @@ class OrmController extends Controller
 {
     public function consultas(){
 
-       // $user = User::find(2);
+        //$user = User::find(2);// los servicios que ofrece el usuario con id 2 proveedor lina
         //return $user->services;
-        $print = "hola";
-        return $print;
+
+        //$users = User::all(); // todos los usuarios
+        //return $users;
+        // $events = Event::all(); // todos los eventos
+        //return $events;
+        
+    /*   return Event::with([
+        'resources',
+        'feedbacks',
+        'notifications'
+
+    ])->get();*/
+
+       return User::with([
+        'events',
+        'events.resources',
+        'events.notifications',
+        'events.feedbacks',
+        'feedbacks',
+        'services'
+
+    ])->get();    
+   /*
+    $user = User::with('events')->get();// todos los eventos de los usuarios
+        return $user;*/
     }
 }
