@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     public function index(){
-        $service = Service::all();
-        return view('service.index', compact('service'));
+        $services = Service::all();
+        return view('service.index', compact('services'));
     }
 }

@@ -7,7 +7,7 @@
 
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
-                <a href="{{ route('category.create') }}" class="btn btn-warning btn-sm mb-4">crear</a>
+               
                 <tr>
                     <th>ID</th>
                     <th>Titulo</th>

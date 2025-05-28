@@ -7,7 +7,6 @@
 
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
-                <a href="{{ route('category.create') }}" class="btn btn-warning btn-sm mb-4">crear</a>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -17,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($categories as $category)
+                @foreach ($users as $user)
                     <tr>
                         <td>{{ $user['id'] }}</td>
                         <td>{{ $user['name'] }}</td>
@@ -25,21 +24,6 @@
                         <td>{{ $user['email'] }}</td>
                         <td>{{ $user['role'] }}</td>
                         <td>{{ $user['password'] }}</td>
-                        
-
-                        <td>
-                            <a href="{{ route('category.show', $category['id']) }}" class="btn btn-info btn-sm">Ver más</a>
-                        </td>
-                        <td><a href="{{ route('category.edit', $category->id) }}"class="btn btn-success btn-sm">Editar</a></td>
-                        <td>
-                        <form action="{{ route('category.destroy', $category->id) }}" method="POST">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-danger d-flex align-items-center gap-2">
-                                <i class="bi bi-trash-fill"></i> Eliminar
-                            </button>
-                        </form>
-                        </td>
                     </tr>
                 @endforeach
             </tbody>
