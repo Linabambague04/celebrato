@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrmController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\EventController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +23,6 @@ Route::get('/', function () {
 
 
 Route::get('orm',[OrmController::class,'consultas']);
+Route::get('user',[UserController::class,'index']);
+Route::get('service',[ServiceController::class,'index']);
+Route::get('event',[EventController::class,'index']);
